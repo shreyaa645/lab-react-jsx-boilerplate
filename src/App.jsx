@@ -1,3 +1,4 @@
+
 import './App.css';
 import elephant from "./images/elephant.jpeg";
 
@@ -25,6 +26,19 @@ const imageData = ()=>{
 
 function App() {
   // code here
+
+  const images = imageData();
+  console.log(images);
+ return (
+ 
+  <div id='grid'>
+    {/* <img src={images[0].img} alt="" id={images[0].id} /> */}
+    
+    {images.map((element) => (
+      <img src={element.img} id={element.id}/>
+    ))};
+ </div>
+ )
 }
 
 export default App;
